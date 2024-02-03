@@ -12,7 +12,7 @@ export default function MultiActionAreaCard({ title, description, imgSrc = '', i
         <CardMedia
           component="img"
           height="140"
-          image={require(`../../assets/images/${imgSrc}.png`)}
+          image={imgSrc ? require(`../../assets/images/${imgSrc}.png`) : ''}
           alt={imgAlt}
         />
         <CardContent>

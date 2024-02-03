@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import LearningScope from '../LearningScope/LearningScope';
+import Discover from '../Discover/Discover';
 import './HomePage.css'
 
 function CustomTabPanel(props) {
@@ -64,7 +65,7 @@ export default function BasicTabs() {
           <LearningScope />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Item Three
+          <Discover />
         </CustomTabPanel>
       </Box>
     </div>
