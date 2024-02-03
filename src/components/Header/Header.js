@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import "./Header.css"
 
 import Logo from '../Logo/Logo';
 
@@ -38,7 +39,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar className="header-container" position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Logo />
