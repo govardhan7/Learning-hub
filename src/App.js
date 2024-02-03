@@ -1,10 +1,13 @@
-import './App.css';
-import DefaultButton from './atoms/Button/Button';
+import Header from './components/Header/Header';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './Theme';
 
 function App() {
   return (
     <div className="App">
-      <DefaultButton></DefaultButton>
+      <ThemeProvider theme={theme}>
+        <Header />
+      </ThemeProvider>
     </div>
   );
 }
