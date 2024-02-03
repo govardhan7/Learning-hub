@@ -1,0 +1,40 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "learning-hub": {
+      "appLocation": ".",
+      "outputLocation": "build",
+      "appBuildCommand": "npm run build",
+      "run": "npm start",
+      "appDevserverUrl": "http://localhost:3000"
+    }
+  },
+  "learning-hub": {
+    "routes": [
+      {
+        "route": "/api/*",
+        "serve": "api/*"
+      },
+      {
+        "route": "/db/*",
+        "serve": "public/db/*"
+      },
+      {
+        "route": "/",
+        "rewrite": "index.html"
+      },
+      {
+        "route": "/manifest.json",  
+        "serve": "public/manifest.json"
+      },
+      {
+        "route": "/*",
+        "serve": "public/*"
+      }
+    ],
+    "navigationFallback": {
+      "rewrite": "index.html",
+      "exclude": ["/api/*"]
+    }
+  }
+}
