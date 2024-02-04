@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
+import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import Personalize from '../Personalize/Personalize';
 import LearningScope from '../LearningScope/LearningScope';
@@ -81,7 +82,13 @@ function BasicTabs ({ userData, userPrioritizationData, updateUserData, updateUs
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             <Tab label="Personalize" {...a11yProps(0)} />
-            <Tab label="Prioritize" {...a11yProps(1)} />
+            <Tab label={
+              <Badge badgeContent={userPrioritizationData?.length} color="error">
+                Prioritize
+              </Badge>
+            } 
+            {...a11yProps(1)} 
+          />
             <Tab label="Discover" {...a11yProps(2)} />
           </Tabs>
         </Box>
