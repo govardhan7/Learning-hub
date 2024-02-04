@@ -78,7 +78,7 @@ export default function LearningScope({ userPrioritizationData = [], onDiscoverC
       </div>
 
       <div className='discover-btn-container'>
-        <Button className="discover-btn" variant="contained" onClick={onDiscoverClick}>Recommend</Button>
+        <Button className="discover-btn" variant="contained" onClick={onDiscoverClick}>Get Recommendations</Button>
       </div >
     </div>
 
