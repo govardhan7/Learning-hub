@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import "./Card.css"
 
 const style = {
   position: 'absolute',
@@ -25,7 +26,7 @@ export default function MultiActionAreaCard({ title, description, imgSrc = '', i
   const handleClose = () => setOpen(false);
   return (
     <>
-      <Modal
+      {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -39,15 +40,16 @@ export default function MultiActionAreaCard({ title, description, imgSrc = '', i
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
         </Box>
-      </Modal>
+      </Modal> */}
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={imgSrc ? require(`../../assets/images/${imgSrc}.png`) : ''}
+          image={imgSrc ? require(`../../assets/images/${imgSrc}`) : ''}
           alt={imgAlt}
         />
+        <div className='learning-type'> Role Based </div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}

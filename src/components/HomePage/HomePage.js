@@ -48,14 +48,17 @@ export default function BasicTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  const handleDiscoverClick = () => {
+    console.log("Discover button clicked!");
+    setValue(2);
+  };
   return (
     <div className='tab-container'>
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             <Tab label="Personalize" {...a11yProps(0)} />
-            <Tab label="Learning" {...a11yProps(1)} />
+            <Tab label="Prioritize" {...a11yProps(1)} />
             <Tab label="Discover" {...a11yProps(2)} />
           </Tabs>
         </Box>
@@ -63,10 +66,10 @@ export default function BasicTabs() {
           <Personalize />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <LearningScope />
+          <LearningScope  onDiscoverClick={handleDiscoverClick}/>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <Discover />
+          <Discover   />
         </CustomTabPanel>
       </Box>
     </div>

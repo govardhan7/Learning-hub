@@ -1,0 +1,12 @@
+.explore-ai {
+    position: absolute;
+    top: 97px;
+    right: 152px;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    text-transform: none !important;
+}
+
+.personalize .css-1f12csb-MuiButtonBase-root-MuiButton-root,
+.css-49r8ba {
+    position: absolute !important;
+}

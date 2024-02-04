@@ -1,5 +1,13 @@
 .header-container {
-    height: 52px;
+    height: 57px;
     display: flex;
     justify-content: center;
+    padding: 0 8vw;
+}
+.profile-container {
+    float: right;
+}
+.app-logo {
+    letter-spacing: .1rem !important;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }

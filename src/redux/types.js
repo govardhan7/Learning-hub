@@ -1,0 +1,5 @@
+// src/redux/types.js
+
+export const FETCH_USER_DATA_SUCCESS = 'FETCH_USER_DATA_SUCCESS';
+export const FETCH_USER_DATA_FAILURE = 'FETCH_USER_DATA_FAILURE';
+export const UPDATE_USER_DATA = 'UPDATE_USER_DATA';

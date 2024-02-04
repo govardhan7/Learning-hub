@@ -1,3 +1,10 @@
 .tab-container {
-  margin: 8vh 8vh 0 8vh;
+  margin: 97px 7vw 7vw 7vw;
+}
+.css-nv25b6-MuiButtonBase-root-MuiTab-root {
+  font-weight: 700 !important;
+  opacity: 0.87;
+}
+.css-gen84r-MuiTabs-indicator {
+  height: 3px !important;
 }

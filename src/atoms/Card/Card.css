@@ -1,0 +1,10 @@
+.learning-type {
+    background-color: #7360DF;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
