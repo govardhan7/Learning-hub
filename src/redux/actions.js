@@ -22,3 +22,8 @@ export const updateUserData = (updatedUserData) => ({
   type: 'UPDATE_USER_DATA',
   payload: updatedUserData,
 })
+
+export const updateUserPrioritizationData = (userPrioritizationData) => ({
+  type: 'UPDATE_USER_PRIORITIZATION',
+  payload: userPrioritizationData,
+})

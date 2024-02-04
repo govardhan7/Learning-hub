@@ -32,33 +32,33 @@ export default function MultiActionAreaCard({ title, description, imgSrc = '', i
   return (
     <>
 
-    <Card className='card-tile' sx={{ maxWidth: 345 }}>
-      <CardActionArea onClick={handleExploreClick}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={imgSrc ? require(`../../assets/images/${imgSrc}`) : ''}
-          alt={imgAlt}
-        />
-        <div className='learning-type'> Role Based </div>
-        <CardContent>
-          <Typography className='course-title' gutterBottom variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography className='course-description' variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button className='explore-btn' size="small" color="primary" onClick={handleExploreClick}>
-          Explore
-        </Button>
+      <Card className='card-tile' sx={{ maxWidth: 345 }}>
+        <CardActionArea onClick={handleExploreClick}>
+          <CardMedia
+            component="img"
+            height="140"
+            image={imgSrc ? require(`../../assets/images/${imgSrc}`) : ''}
+            alt={imgAlt}
+          />
+          <div className='learning-type'> Role Based </div>
+          <CardContent>
+            <Typography className='course-title' gutterBottom variant="h5" component="div">
+              {title}
+            </Typography>
+            <Typography className='course-description' variant="body2" color="text.secondary">
+              {description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button className='explore-btn' size="small" color="primary" onClick={handleExploreClick}>
+            Explore
+          </Button>
 
-        <div className='duration'>
-        <TimelapseIcon /> <span className='duration-time'>{duration}</span></div>
-      </CardActions>
-    </Card>
+          <div className='duration'>
+            <TimelapseIcon /> <span className='duration-time'>{duration}</span></div>
+        </CardActions>
+      </Card>
     </>
   );
 }

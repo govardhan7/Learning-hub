@@ -1,10 +1,11 @@
 // src/redux/reducers.js
 
-import { FETCH_USER_DATA_SUCCESS, FETCH_USER_DATA_FAILURE, UPDATE_USER_DATA } from './types';
+import { FETCH_USER_DATA_SUCCESS, FETCH_USER_DATA_FAILURE, UPDATE_USER_DATA, UPDATE_USER_PRIORITIZATION } from './types';
 
 const initialState = {
   userData: null,
   error: null,
+  userPrioritizationData: []
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -26,6 +27,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         userData: action.payload,
       };
+    case UPDATE_USER_PRIORITIZATION:
+      return {
+        ...state,
+        userPrioritizationData: action.payload
+      }
     default:
       return state;
   }
