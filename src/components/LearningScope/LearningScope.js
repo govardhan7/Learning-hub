@@ -1,38 +1,10 @@
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
 import './LearningScope.css';
-import DefaultButton from '../../atoms/Button/Button';
-import { Typography } from '@mui/material';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import Button from '@mui/material/Button';
 
 
-export default function LearningScope({ learningScopeData = [] , onDiscoverClick }) {
-  const handleDelete = () => {
-
-  }
-  const userPrioritizationData = [
-    {
-      "id": 1,
-      "techStackId": 7,
-      "technology": "React.js"
-    },
-    {
-      "id": 2,
-      "techStackId": 8,
-      "technology": "Node.js"
-    },
-    {
-      "id": 3,
-      "techStackId": 9,
-      "technology": "JavaScript"
-    },
-    {
-      "id": 4,
-      "techStackId": 10,
-      "technology": "AWS"
-    }
-  ];
+export default function LearningScope({ userPrioritizationData = [] , onDiscoverClick, handleData }) {
   const managerAssignmentsData = [
     {
       "id": 1,
@@ -63,7 +35,7 @@ export default function LearningScope({ learningScopeData = [] , onDiscoverClick
 
 
   const handleChipClick = (technology, group) => {
-    console.log("delete");
+    handleData(technology, group);
   };
 
   return (
@@ -77,10 +49,9 @@ export default function LearningScope({ learningScopeData = [] , onDiscoverClick
               key={tech.id}
               label={tech.technology}
               className={`chip ${tech.selected ? 'chip-selected' : ''}`}
-              onClick={() => handleChipClick(tech.technology)}
+              onClick={() => handleChipClick(tech.technology, tech.group)}
               avatar={<RemoveCircleOutlineIcon />}
             />
-
           ))}
         </div>
       </div>
