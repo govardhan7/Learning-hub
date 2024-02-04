@@ -2,9 +2,10 @@ import Chip from '@mui/material/Chip';
 import './LearningScope.css';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import Button from '@mui/material/Button';
+import BlockRoundedIcon from '@mui/icons-material/BlockRounded';
+import InfoIcon from '@mui/icons-material/Info';
 
-
-export default function LearningScope({ userPrioritizationData = [] , onDiscoverClick, handleData }) {
+export default function LearningScope({ userPrioritizationData = [], onDiscoverClick, handleData }) {
   const managerAssignmentsData = [
     {
       "id": 1,
@@ -43,17 +44,23 @@ export default function LearningScope({ userPrioritizationData = [] , onDiscover
 
       <div className={"y-learning-scope"}>
         <div className='y-label'>Your Prioritizations</div>
-        <div className='your-learning'>
-          {userPrioritizationData.map(tech => (
-            <Chip
-              key={tech.id}
-              label={tech.technology}
-              className={`chip ${tech.selected ? 'chip-selected' : ''}`}
-              onClick={() => handleChipClick(tech.technology, tech.group)}
-              avatar={<RemoveCircleOutlineIcon />}
-            />
-          ))}
-        </div>
+        {userPrioritizationData.length === 0 ? (
+          <div className='your-learning-info'>
+            <InfoIcon/><p> Personalize your learnings</p>
+          </div>
+        ) : (
+          <div className='your-learning'>
+            {userPrioritizationData.map(tech => (
+              <Chip
+                key={tech.id}
+                label={tech.technology}
+                className={`chip ${tech.selected ? 'chip-selected' : ''}`}
+                onClick={() => handleChipClick(tech.technology, tech.group)}
+                avatar={<RemoveCircleOutlineIcon />}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <div className={"m-learning-scope"}>
         <div className='m-label'>Manager Assignments</div>
@@ -62,9 +69,8 @@ export default function LearningScope({ userPrioritizationData = [] , onDiscover
             <Chip
               key={tech.id}
               label={tech.technology}
-              className={`chip ${tech.selected ? 'chip-selected' : ''}`}
-              onClick={() => handleChipClick(tech.technology)}
-              avatar={<RemoveCircleOutlineIcon />}
+              className={`chip chip-disabled ${tech.selected ? 'chip-selected' : ''}`}
+              avatar={<BlockRoundedIcon />}
             />
 
           ))}
@@ -72,7 +78,7 @@ export default function LearningScope({ userPrioritizationData = [] , onDiscover
       </div>
 
       <div className='discover-btn-container'>
-        <Button className="discover-btn" variant="contained" onClick={onDiscoverClick} >Discover</Button>
+        <Button className="discover-btn" variant="contained" onClick={onDiscoverClick}>Recommend</Button>
       </div >
     </div>
 

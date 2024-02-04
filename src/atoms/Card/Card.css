@@ -22,10 +22,19 @@
     -webkit-line-clamp: 1;
     /* Number of lines to show */
     -webkit-box-orient: vertical;
+    /* display: flex;
+    align-items: center;
+    gap: 5px; */
 }
 
 .course-description {
     opacity: 0.87;
+}
+.completed-course {
+    color: rgba(0, 182, 0, 0.861);
+    position: absolute;
+    right: 14px;
+    top: 183px;
 }
 
 .css-r40f8v-MuiTypography-root {
@@ -51,4 +60,16 @@
 }
 .duration-time {
     margin-left: 5px;
+}
+.approval {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFCF00;
+    padding: 5px;
+    border-radius: 2px;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 0.87;
 }

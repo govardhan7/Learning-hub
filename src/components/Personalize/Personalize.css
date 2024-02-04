@@ -10,3 +10,13 @@
 .css-49r8ba {
     position: absolute !important;
 }
+@media only screen and (max-width: 600px) {
+    .ai-model-label {
+      display: none;
+
+    }
+    .explore-ai { 
+        top: 70px;
+        right: 0;
+    }
+  }

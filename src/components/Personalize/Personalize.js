@@ -8,7 +8,7 @@ export default function Personalize({ handleData }) {
   return (
     <div className="personalize">
       <Button className="explore-ai" variant="contained" startIcon={<LightbulbIcon />}
-        onClick={() => window.open(copilotLink, '_blank')}>Get AI Learning recommendations</Button>
+        onClick={() => window.open(copilotLink, '_blank')}><span className="ai-model-label">Get AI Learning recommendations</span></Button>
       <Cluster 
         handleData={handleData}
       />

@@ -2,3 +2,9 @@
     margin-top: 27px !important;
 
 }
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

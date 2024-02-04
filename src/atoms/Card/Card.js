@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import { Button, CardActionArea, CardActions, duration } from '@mui/material';
 import "./Card.css"
 import TimelapseIcon from '@mui/icons-material/Timelapse';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const style = {
   position: 'absolute',
@@ -21,7 +22,7 @@ const style = {
   p: 4,
 };
 
-export default function MultiActionAreaCard({ title, description, imgSrc = '', imgAlt = '', duration }) {
+export default function MultiActionAreaCard({ title, description, imgSrc = '', imgAlt = '', duration, completed , waitingForApproval}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -40,10 +41,17 @@ export default function MultiActionAreaCard({ title, description, imgSrc = '', i
             image={imgSrc ? require(`../../assets/images/${imgSrc}`) : ''}
             alt={imgAlt}
           />
+         
+          {waitingForApproval && (
+               <div className='approval'>Approval Pending</div>
+              )}
           <div className='learning-type'> Role Based </div>
           <CardContent>
             <Typography className='course-title' gutterBottom variant="h5" component="div">
-              {title}
+              {title}  
+              {completed && (
+              <CheckCircleRoundedIcon className='completed-course'/>
+              )}
             </Typography>
             <Typography className='course-description' variant="body2" color="text.secondary">
               {description}

@@ -15,6 +15,13 @@
   flex-wrap: wrap;
 }
 
+.y-learning-scope {
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .learning-scope .learning-scope-list {
   min-height: 40vh;
   padding: 2vh;
@@ -58,11 +65,11 @@ chip selected background: #1f6f78 !important;
   color: rgb(197, 57, 57) !important;
 } */
 
-.scope-container .css-1q7gtuq-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
+/* .scope-container .css-1q7gtuq-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
   color: rgb(255, 102, 7) !important;
   background-color: white;
   border-radius: 100%;
-}
+} */
 
 .discover-btn-container {
   width: 100%;
@@ -86,14 +93,31 @@ chip selected background: #1f6f78 !important;
   margin-bottom: 0;
 }
 
+
 .scope-container .css-lk0jah .MuiChip-avatar {
-  color: rgb(255, 102, 7) !important;
-  background-color: white !important;
-  border-radius: 100%;
+
 
 }
+
 .css-1q7gtuq-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
 
   height: 22px !important;
   width: 22px !important;
+}
+.your-learning .css-1q7gtuq-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
+  color: rgb(255, 102, 7) !important;
+  background-color: white !important;
+  border-radius: 100%;
+}
+
+.scope-container .chip-disabled .MuiChip-avatar{
+  color: rgba(46, 20, 20, 0.699) !important;
+  background-color: none !important;
+  border-radius: 100%;
+}
+.your-learning-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 0, 0, 0.619);
 }

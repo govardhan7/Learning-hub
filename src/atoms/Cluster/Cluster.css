@@ -33,12 +33,12 @@
     /* background-color: #d0bdf4; */
     /* background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584); */
     /* background: linear-gradient(93.81deg, #fc3e42 0%, #db28c2 100%); */
-    background: linear-gradient(93.81deg, #fc3e42b8 0%, #db28c2c7 100%);
+    background: rgb(49 59 224 / 32%);
+    box-shadow: rgb(49 59 224 / 32%) 1px 1px 17px 0px;
     color: white;
     opacity: 1;
     /* box-shadow: #d76365 1px 1px 17px 0px;
      */
-     box-shadow: #d76365b8 1px 1px 17px 0px;
     /* box-shadow: #dcbcfc 1px 1px 17px 0px; */
 
 
@@ -83,9 +83,7 @@ chip selected background: #1f6f78 !important;
     color: white !important;
 }
 
-.css-1q7gtuq-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
-    color: white !important;
-}
+
 
 .cluster-name {
     font-size: 18px;

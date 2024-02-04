@@ -61,7 +61,7 @@ function ResponsiveAppBar() {
           </Typography>
 
 
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -73,19 +73,20 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '0',
+              fontSize:20,
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Learning-Hub
           </Typography>
 
           <Box sx={{ flexGrow: 2 }} >
             <Tooltip title="Profile" className="profile-container">
               {/* <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}> */}
                 <Avatar
-                  src={require("../../assets/images/Advaced react.jpg").default}
+                  src={require("../../assets/images/avatar profile.jpg")}
                   sx={{ width: 32, height: 32, borderRadius: '50%' }}
                 />
               {/* </IconButton> */}
