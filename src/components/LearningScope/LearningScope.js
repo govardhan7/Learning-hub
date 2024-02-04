@@ -85,7 +85,7 @@ export default function LearningScope({ learningScopeData = [] , onDiscoverClick
         </div>
       </div>
       <div className={"m-learning-scope"}>
-        <div className='m-label'>Manger Assignments</div>
+        <div className='m-label'>Manager Assignments</div>
         <div className='manager-assignments'>
           {managerAssignmentsData.map(tech => (
             <Chip

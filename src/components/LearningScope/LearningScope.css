@@ -36,7 +36,7 @@ chip selected background: #1f6f78 !important;
 */
 .scope-container .chip {
   /* background-color: #287c72d9 !important;      */
-  background-color: #8458B3 !important;
+  background-color: #741ecf !important;
 
   color: white !important;
   min-width: 152px;
@@ -89,4 +89,10 @@ chip selected background: #1f6f78 !important;
   color: rgb(255, 102, 7) !important;
   background-color: white !important;
   border-radius: 100%;
+
+}
+.css-1q7gtuq-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
+
+  height: 22px !important;
+  width: 22px !important;
 }

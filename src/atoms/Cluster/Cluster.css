@@ -30,9 +30,16 @@
     border-radius: 10px;
     /* background-color: rgb(0 204 197 / 12%); */
     /* background-color: #93e4c166; */
-    background-color: #d0bdf4;
+    /* background-color: #d0bdf4; */
     /* background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584); */
-    box-shadow: #dcbcfc 1px 1px 17px 0px;
+    /* background: linear-gradient(93.81deg, #fc3e42 0%, #db28c2 100%); */
+    background: linear-gradient(93.81deg, #fc3e42b8 0%, #db28c2c7 100%);
+    color: white;
+    opacity: 1;
+    /* box-shadow: #d76365 1px 1px 17px 0px;
+     */
+     box-shadow: #d76365b8 1px 1px 17px 0px;
+    /* box-shadow: #dcbcfc 1px 1px 17px 0px; */
 
 
 
@@ -50,9 +57,11 @@ chip selected background: #1f6f78 !important;
 */
 .chip {
     /* background-color: #287c72d9 !important;      */
-    background-color: #8458B3 !important;
+    /* background-color: #8458B3 !important;
 
-    color: white !important;
+    color: white !important; */
+    background: white !important;
+    color: black !important;
     min-width: 152px;
     min-height: 41px;
     border-radius: 14px;
@@ -65,6 +74,7 @@ chip selected background: #1f6f78 !important;
 
 .chip-selected {
     background: #741ecf !important;
+    color: white !important;
 }
 
 .css-1ufu0uy-MuiChip-root .MuiChip-avatar {
