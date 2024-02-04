@@ -11,7 +11,10 @@
     letter-spacing: .1rem !important;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
-.css-imxc6v-MuiBadge-badge {
+.css-imxc6v-MuiBadge-badge, .css-2ubntf {
     top: -5px !important;
     right: -6px !important;
+}
+.css-9krsua {
+    font-size: 17px !important;
 }

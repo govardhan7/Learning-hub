@@ -109,6 +109,11 @@ chip selected background: #1f6f78 !important;
   background-color: white !important;
   border-radius: 100%;
 }
+.your-learning .css-lk0jah .MuiChip-avatar {
+  color: rgb(255, 102, 7) !important;
+  background-color: white !important;
+  border-radius: 100%;
+}
 
 .scope-container .chip-disabled .MuiChip-avatar{
   color: rgba(46, 20, 20, 0.699) !important;

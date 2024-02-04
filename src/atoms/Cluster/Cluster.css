@@ -21,18 +21,11 @@
 }
 
 .cluster {
-    padding: 10px 20px;
+    padding: 10px 8px;
     margin: 10px 52px 58px 40px;
-    /* width: 32vw; */
-    width: 28vw;
-    /* Adjusted width to fit two clusters in a row */
+    width: 30vw;
     box-sizing: border-box;
     border-radius: 10px;
-    /* background-color: rgb(0 204 197 / 12%); */
-    /* background-color: #93e4c166; */
-    /* background-color: #d0bdf4; */
-    /* background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584); */
-    /* background: linear-gradient(93.81deg, #fc3e42 0%, #db28c2 100%); */
     background: rgb(49 59 224 / 32%);
     box-shadow: rgb(49 59 224 / 32%) 1px 1px 17px 0px;
     color: white;
@@ -67,10 +60,32 @@ chip selected background: #1f6f78 !important;
     border-radius: 8px !important;
     font-size: 13px;
     font-weight: 700;
-    margin: 5px 14px !important;
+    margin: 5px 5px !important;
     display: flex;
     flex-flow: row-reverse;
     box-shadow: rgb(199, 147, 147) 1px 1px 7px 0px;
+}
+
+.chip:nth-child(odd) {
+    margin: 5px 20px 5px 14px !important;
+}
+
+@media only screen and (max-width: 1242px) {
+    .chip:nth-child(odd) {
+        margin: 5px 5px !important;
+    }
+}
+
+@media only screen and (min-width: 1402px) {
+    .chip:nth-child(odd) {
+        margin: 5px 27px 5px 14px !important;
+    }
+}
+
+@media only screen and (min-width: 1870px) {
+    .chip:nth-child(odd) {
+        margin: 5px 5px !important;
+    }
 }
 
 .chip-selected {
@@ -90,6 +105,7 @@ chip selected background: #1f6f78 !important;
     font-weight: 700;
     margin: 14px;
     opacity: 0.9;
+    color: #191e72bd;
 }
 
 .recommendation-checkbox {
@@ -100,6 +116,7 @@ chip selected background: #1f6f78 !important;
     opacity: 0.8;
 
 }
+
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
     font-size: 14px;
     margin-left: -7px;
@@ -107,9 +124,11 @@ chip selected background: #1f6f78 !important;
     opacity: 0.8;
 }
 
-.css-1hbvpl3-MuiSvgIcon-root,.css-11zohuh-MuiSvgIcon-root {
+.css-1hbvpl3-MuiSvgIcon-root,
+.css-11zohuh-MuiSvgIcon-root {
     height: 20px !important;
 }
+
 .clusters-container .css-w7jlz4 .MuiChip-avatar {
-color: white !important;
+    color: white !important;
 }
