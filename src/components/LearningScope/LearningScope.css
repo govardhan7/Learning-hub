@@ -44,7 +44,8 @@ chip selected background: #1f6f78 !important;
   border-radius: 8px !important;
   font-size: 13px;
   font-weight: 700;
-  margin: 5px 14px !important;
+  margin: 10px 14px !important;
+  box-shadow: #9559d4 1px 1px 10px 0px;
   /* display: flex;
   flex-flow: row-reverse; */
 }

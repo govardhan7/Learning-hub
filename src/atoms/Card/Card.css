@@ -1,3 +1,6 @@
+.card-tile {
+    margin-bottom: 25px!important;
+}
 .learning-type {
     background-color: #7360DF;
     color: white;
@@ -7,4 +10,45 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
+}
+
+.course-title {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    opacity: 0.97;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.course-description {
+    opacity: 0.87;
+}
+
+.css-r40f8v-MuiTypography-root {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.explore-btn {
+    background-color: black !important;
+    color: white !important;
+    padding: 4px 14px !important;
+    margin: 5px 10px !important;
+}
+.duration {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+.duration-time {
+    margin-left: 5px;
 }

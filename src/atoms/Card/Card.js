@@ -5,8 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, duration } from '@mui/material';
 import "./Card.css"
+import TimelapseIcon from '@mui/icons-material/Timelapse';
 
 const style = {
   position: 'absolute',
@@ -20,29 +21,19 @@ const style = {
   p: 4,
 };
 
-export default function MultiActionAreaCard({ title, description, imgSrc = '', imgAlt = '' }) {
+export default function MultiActionAreaCard({ title, description, imgSrc = '', imgAlt = '', duration }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const handleExploreClick = () => {
+    // Open the link in a new window when the Explore button is clicked
+    window.open(`https://marcel.ai/classes/course/course:2018738`, '_blank');
+  };
   return (
     <>
-      {/* <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
-        </Box>
-      </Modal> */}
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+
+    <Card className='card-tile' sx={{ maxWidth: 345 }}>
+      <CardActionArea onClick={handleExploreClick}>
         <CardMedia
           component="img"
           height="140"
@@ -51,18 +42,21 @@ export default function MultiActionAreaCard({ title, description, imgSrc = '', i
         />
         <div className='learning-type'> Role Based </div>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography className='course-title' gutterBottom variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography className='course-description' variant="body2" color="text.secondary">
             {description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={handleOpen}>
+        <Button className='explore-btn' size="small" color="primary" onClick={handleExploreClick}>
           Explore
         </Button>
+
+        <div className='duration'>
+        <TimelapseIcon /> <span className='duration-time'>{duration}</span></div>
       </CardActions>
     </Card>
     </>

@@ -81,32 +81,15 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
 
-
-          <Box sx={{ flexGrow: 2}} >
-            <Tooltip title="Logout" className="profile-container">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
+          <Box sx={{ flexGrow: 2 }} >
+            <Tooltip title="Profile" className="profile-container">
+              {/* <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}> */}
+                <Avatar
+                  src={require("../../assets/images/Advaced react.jpg").default}
+                  sx={{ width: 32, height: 32, borderRadius: '50%' }}
+                />
+              {/* </IconButton> */}
             </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

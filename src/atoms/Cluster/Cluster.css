@@ -64,17 +64,19 @@ chip selected background: #1f6f78 !important;
     color: black !important;
     min-width: 152px;
     min-height: 41px;
-    border-radius: 14px;
+    border-radius: 8px !important;
     font-size: 13px;
     font-weight: 700;
     margin: 5px 14px !important;
     display: flex;
     flex-flow: row-reverse;
+    box-shadow: rgb(199, 147, 147) 1px 1px 7px 0px;
 }
 
 .chip-selected {
     background: #741ecf !important;
     color: white !important;
+    box-shadow: #9c68d4 1px 1px 7px 0px;
 }
 
 .css-1ufu0uy-MuiChip-root .MuiChip-avatar {
